@@ -1,0 +1,22 @@
+function [a, d]=filterbank_abank{x,h0,f0,Pa,Ua,Kp,Ku,pph,intel}
+% [a,d]=ABANK(x,h0,f0,Pa,Ua,Kp,pph,intel)
+% Filter bank: Analysis, one iteration.
+% No boundary effects are taken into account. Signal need not be of length power-of-two.
+
+%INPUTY
+
+%x   input signal
+%h0,f0  the filter coefficients
+%Pa,Ua,Kp,Ku  the lifting operators
+%pph  1 Time-domain full bitrate (inefficient);
+% 2 time-domain polyphase (inefficient);
+% 3 Z-domain polyphase (fast, default)
+% 4 Lifting
+
+
+%Output
+%a  Approximation (lowpass, scaling) coefficients
+%d  Detail (Highpass, wavelet) coefficients
+
+%See also SBANK, FBANK, WT, IWT, WTLIFT, SUCCAPP
+
